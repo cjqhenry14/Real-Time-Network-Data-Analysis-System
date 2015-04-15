@@ -1,0 +1,44 @@
+1.检测和补包不同步，大数据下测一下
+2.补包过程中 payload写入文件，全部16进制的写入。检测到的规则 用16进制去文件里面验证正确性。
+
+
+
+
+
+
+*********************************
++++++++++ TEST +++++++++++
+
+ download a file, then test in pcap and sql to compare.
+
+++++++++++++++++++++++++++
+-------- LATER -------------------
+after correction is test.
+1.define time to clean hash --------------- after test shows is totally OK!
+3.get data from pcap
+
+---------------------------------
+////////////// now /////////////
+1. different mut; pop add mut 
+4. input pcap to sql: use hex "6E AA"
+
+
+
+
+
+
+////////////////  important !/////////////////
+
+!!!level rarline  sometimes is wrong!!!   they are just useful in test (baogao), impossible to show to teachers, or not, make suitable test cases.
+
+/*store the hex data. 08ffe2867 just like that in Mysql. Because it is easy to read and wirte. 256 bit data.
+rules: some are string,such as kille,http; others are hex number, such as  08ffe2867.*/
+
+all data is prtitable ascii(<128)
+
+4.2056 1048 need memory to store..a[1048] or a[2056]?
+most are right: cur_seq + length = next_seq. But some the distance is 50000 or  20000 ..... drop it?
+====================================================
+
+
+

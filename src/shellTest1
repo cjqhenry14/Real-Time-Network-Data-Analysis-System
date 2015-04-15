@@ -1,0 +1,7 @@
+#!/bin/sh
+#three commonds：
+mkdir /var/run/mysqld/
+
+sudo ln -s /opt/lampp/var/mysql/mysql.sock /var/run/mysqld/mysqld.sock
+
+/opt/lampp/lampp start

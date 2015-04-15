@@ -1,0 +1,36 @@
+1.数据包捕获模块  Sniffer
+2.解码模块        Decoder
+3.预处理模块      Preprocessor
+4.检测模块        DetectionEngine
+5.存储模块        AttackStore
+6.响应模块        AlertCenter
+7.管理员模块      Manager
+8.规则库模块      RuleBase
+
+Common 公共部分
+Documents 文档
+
+DetectionEngine -- AC:  //2000 lines
+1.ac
+2.acvl
+3.rarline
+4.levelAcvl
+5.boolBitMap
+6.boolBitAcvl
+
+//====================    today    ======================
+截取字符串到rule(3000-3020) 
+msg:MALWARE-CNC Win.Worm.Neeris IRCbot outbound connection   type:trojan-activity
+//----------from 52503 ----------------------
+3001 :ED629F88D17D6962EF31E97CDDC1FEDDA47A7CEF8D
+3002 :
+3003 :
+3004 :
+3005 :
+3006 :
+3007 :
+3008 :
+3009 :
+3010 :
+3011 :
+3012 :

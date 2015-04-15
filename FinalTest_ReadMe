@@ -1,0 +1,24 @@
+检测测试：获取数据库中pcapData的数据（为下载和打开网页的抓包数据）
+检测结果存到attackStore里面，TCP 62条结果，UDP 5条结果。 
+1.取UDP测试结果第四条
+[192.168.1.1] [53] -> [192.168.1.107] [16561]
+攻击类型: attempted-admin   |   攻击特征: |01 00 02|
+然后在pcapData里面 SELECT * FROM `pcapData` WHERE dst_port = 16561
+查找目的端口号为16561的数据包，ctrl+f content字段里面是否存在010002。
+
+
+2.TCP测试结果第61条
+[203.208.48.137] [80] -> [192.168.1.107] [53211]
+攻击类型: attempted-recon   |   攻击特征: private
+
+在ruleBase 数据库中 SELECT * FROM `ruleBase` WHERE content = 'private'，得到hex_content 为 70726976617465
+
+然后在pcapData里面 SELECT * FROM `pcapData` WHERE dst_port = 53211
+ 查找目的端口号为53211的数据包，ctrl+f content字段里面是否存在70726976617465。
+
+
+///////////
+2.TCP测试结果第62条
+[67.215.253.139] [80] -> [192.168.1.107] [56831]
+攻击类型: misc-attack   |   攻击特征: |04 01 00|
+然后在pcapData里面 查找目的端口号为56831的数据包，ctrl+f content字段里面是否存在040100。

@@ -1,0 +1,10 @@
+
+
+first: no tuple, just content...
+(if time is possible, plus tuple NET any-> NET any)
+
+rule-sql:
+rule_id,  msg,  content, classtype(规则类别标识)
+
+//--------- do ----------------------
+2.every line: 1 MSG, n content.
